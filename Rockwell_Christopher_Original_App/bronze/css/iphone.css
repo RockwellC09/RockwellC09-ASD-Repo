@@ -1,0 +1,44 @@
+body    {
+    font-family: GurmukhiMN, AmericanTypewriter;
+    font-size: 20px;
+}
+
+header  {
+    height:65px;
+}
+
+h1  {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 33px;
+    padding-top: 13px;
+}
+
+a    {
+    font-family: Optima-ExtraBlack, GillSans-Bold;
+}
+
+textarea    {
+    display: block;
+    margin: 0px auto 0px auto;
+    width:95%;  
+}
+
+#home-button a  {
+    background: #0d726f;
+    color: #292929;
+    font-family: GurmukhiMN-Bold;
+    font-size: 25px;
+    height: 35px;
+}
+
+#items  {
+    margin: 10px;
+}
+
+#cat1, #cat2, #cat3, #cat4 {
+    font-family: GurmukhiMN, AmericanTypewriter;
+}
+
+#cat1Bg, #cat2Bg, #cat3Bg, #cat4Bg {
+    padding-top: 13px;
+}

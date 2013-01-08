@@ -1,0 +1,348 @@
+body    {
+    background: url(../images/bg2.png);
+    margin: 0 auto;
+    padding: 0px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size:18px;
+    color: #0d726f;
+}
+header  {
+    color: #292929;
+    background: url(../images/title.png);
+    height:65px;
+    margin:0px;
+    -moz-box-shadow: .5px .5px 4px #000;
+    -webkit-box-shadow: .5px .5px 4px #000;
+    box-shadow: .5px .5px 4px #000;
+}
+h1      {
+    font-family: "Arial Black", Gadget, sans-serif;
+    margin:0 auto;
+    text-align: center;
+    padding-top: 6px;
+    text-shadow: rgba(0,0,0,0.5) -1.5px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -1px;
+}
+#container {
+    width:auto;
+    padding:10px 10px 10px 10px;
+}
+#add-item input      {
+    height: 20px;
+    margin: 10px 0px 10px 0px;
+    border: 4px solid #528786;
+    background: #292929;
+    color: white;
+    -moz-box-shadow: 1px 2px 3px #000;
+    -webkit-box-shadow: .8px .8px 3px #000;
+    box-shadow: 1px 2px 3px #000;
+    font-size: 18px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+#bgSearch {
+    background: #0d726f;
+    width: 150px;
+    margin: -10px auto 0px auto;
+    padding: 10px;
+    -moz-box-shadow: inset .5px .5px 3px .5px #000;
+    -webkit-box-shadow: inset .5px .5px 3px .5px #000;    
+    box-shadow: inset .5px .5px 3px .5px #000;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+ #bgSearch input {
+    border: 2px solid #528786;
+    background: #292929;
+    color: white;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    font-size: 18px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+#add-item input:focus {
+    outline-color: white;
+}
+
+#cat1, #cat2, #cat3, #cat4 {
+    background: url(../images/button2.png);
+    font-weight: bold;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 22px;
+    width: 310px;
+    height: 50px;
+    text-align: center;
+    margin: 5px auto 0px auto;
+    color: white;
+    text-shadow: rgba(0,0,0,0.5) -1.5px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -1px;
+}
+
+#cat1Bg, #cat2Bg, #cat3Bg, #cat4Bg {
+    padding-top: 10px;
+}
+
+#subCat1, #subCat2, #subCat3, #subCat1-2, #subCat2-2, #subCat3-2,
+#subCat1-3, #subCat2-3, #subCat3-3, #subCat4-3, #subCat1-4, #subCat2-4, #subCat3-4, #subCat4-4
+{
+    background: #0d726f;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    margin:5px auto;
+    display: none;
+    font-size: 20px;
+}
+
+#subCatsBg {
+    padding-top: 10px;
+}
+
+p   {
+    display: inline;
+    font-family: Georgia, serif, Arial;
+    font-size: 20px;
+}
+
+textarea {
+    margin: 10px 0px 10px 0px;
+    border: 4px solid #528786;
+    background: #292929;
+    color: white;
+    font-size: 18px;
+    -moz-box-shadow: 1px 2px 3px #000;
+    -webkit-box-shadow: .8px .8px 3px #000;
+    box-shadow: 1px 2px 3px #000;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+textarea:focus {
+    outline-color: white;
+}
+
+submit     {
+    height:35px;
+    font-size: 20px;
+    color: white;
+    width:120px;
+    text-align: center;
+    display:inline;
+    margin-right: 5px;
+    border-color: #0d726f;
+    background: #292929;
+}
+
+#add-item #submit {
+    height: 35px;
+}
+
+select  {
+    font-size: 18px;
+    font-family: monospace;
+}
+
+fieldset    {
+    border: 3px solid #858384;
+    -moz-box-shadow: inset 1px 1px 3px .5px #000;
+    -webkit-box-shadow: inset 1px 1px 3px .5px #000;    
+    box-shadow: inset 1px 1px 3px .5px #000;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+#title a {
+    margin: 0px;
+    padding: 0px;
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: block;
+}
+
+legend  {
+    background: #292929;
+    color: white;
+    font-size: larger;
+    padding: 5px;
+}
+
+ul li ul li:last-child  {
+    margin-top: -45px;
+    margin-bottom: 40px; 
+}
+
+ul {
+    list-style-type: none;
+    margin-left: -25px;
+}
+
+a   {
+    color: #292929;
+    background: #10847e;
+    display: inline-block;
+    position: relative;
+    margin-left: 5px;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    font: bold 20px Georgia, serif;
+ 
+    text-shadow: 1px 1px 1px rgba(255,255,255, .22);
+ 
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+ 
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+ 
+    -webkit-transition: all 0.15s ease; 
+    -moz-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+    -ms-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+
+}
+
+#ex {
+    padding: 10px 12px 14px 12px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background: #292929;
+    border: 8px solid #0d726f;
+}
+
+#about {
+    background: #292929;
+    margin-bottom: -5px;
+    padding: 5px;
+    display: none;
+    color: white;
+}
+
+#aboutButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    margin-top: 0px;
+    background: #292929;
+    -webkit-box-shadow: 0px 0px 0px rgba(0,0,0, .29), inset 0px 0px 0px rgba(255,255,255, .44);
+    -moz-box-shadow: 0px 0px 0px rgba(0,0,0, .29), inset 0px 0px 0px rgba(255,255,255, .44);
+    box-shadow: 0px 0px 0px rgba(0,0,0, .29), inset 0px 0px 0px rgba(255,255,255, .44);
+    color: white;
+    font-size:20px;
+}
+
+#errors {
+    color:#D9343C;
+}
+
+#home-button a  { 
+    padding:18px 18px 10px 18px;
+}
+#home-container {
+    text-align: center;
+    margin: 1px 0px 10px 0px;
+}
+
+#home-container img {
+   -webkit-box-shadow: .3px .3px 2px 1px #292929;
+    box-shadow: .3px .3px 2px 1px #292929;
+}
+
+#home-container a {
+    margin: 0px;
+    padding: 0px;
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.button {
+    text-align: center;
+}
+
+.ui-progressbar .ui-progressbar-value { background-image: url(images/pbar-ani.gif); }
+
+
+progress,          /* All HTML5 progress enabled browsers */
+progress[role]     /* polyfill */
+{
+
+	/* Turns off styling - not usually needed, but good to know. */
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	/* gets rid of default border in Firefox and Opera. */
+	border: none;
+
+	/* Needs to be in here for Safari polyfill so background images work as expected. */
+	background-size: auto;
+
+	/* Dimensions */
+	width: 200px;
+	height: 20px;
+
+}
+
+/* Polyfill */
+progress[role]:after {
+	background: none; /* removes default background from polyfill */
+}
+
+/* Ensure fallback text doesn't appear in polyfill */
+progress[role] strong {
+	display: none;
+}
+
+progress,                          /* Firefox  */
+progress[role][aria-valuenow] {    /* Polyfill */
+   background: #EDD6AF !important; /* !important is needed by the polyfill */
+}
+
+/* Chrome */
+progress::-webkit-progress-bar {
+    background: #EDD6AF;
+}
+
+/* IE10 */
+progress {
+    color:url(../images/pbar-ani.gif);
+}
+
+/* Firefox */
+progress::-moz-progress-bar {
+    background: url(../images/pbar-ani.gif);
+}
+
+/* Chrome */
+progress::-webkit-progress-value {
+    background: url(../images/pbar-ani.gif);
+}
+
+/* Polyfill */
+progress[aria-valuenow]:before  {
+    background: url(../images/pbar-ani.gif);
+}
+
+
+

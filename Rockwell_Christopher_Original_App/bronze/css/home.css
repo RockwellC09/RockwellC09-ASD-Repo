@@ -1,0 +1,27 @@
+#head-img{
+    -webkit-box-shadow: .3px .3px 2px 1px #292929;
+    box-shadow: .3px .3px 2px 1px #292929;
+    margin-top: -14px;
+    margin-bottom: 15px;
+    margin-left: -15px;
+}
+
+.ui-header .ui-title { margin-left: 1em; margin-right: 1em; }
+
+.ui-btn-up-b, .ui-bar-b {
+    border: 1px solid #07403E;
+    background: #0A5957;
+    background-image: -webkit-linear-gradient( #0d726f /*{b-bup-background-start}*/, #0A5957 /*{b-bup-background-end}*/); /* Chrome 10+, Saf5.1+ */
+    background-image:    -moz-linear-gradient( #0d726f /*{b-bup-background-start}*/, #0A5957 /*{b-bup-background-end}*/); /* FF3.6 */
+    background-image:     -ms-linear-gradient( #0d726f /*{b-bup-background-start}*/, #0A5957 /*{b-bup-background-end}*/); /* IE10 */
+    background-image:      -o-linear-gradient( #0d726f /*{b-bup-background-start}*/, #0A5957 /*{b-bup-background-end}*/); /* Opera 11.10+ */
+    background-image:         linear-gradient( #0d726f /*{b-bup-background-start}*/, #0A5957/*{b-bup-background-end}*/);
+}
+
+.ui-bar-a a.ui-link:active {
+  color: black;
+}
+
+#grid-img {
+    margin-left: 0px;
+}
