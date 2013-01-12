@@ -189,32 +189,32 @@ var getData = function(){
 		makeDiv.appendChild(makeList);
 		 $("#dis").append($(makeDiv));
 		for(var i=0,j=localStorage.length;i<j;i++){
-            var makeLi = document.createElement('li');
-            var linksLi = document.createElement('li');
-            makeList.appendChild(makeLi);
-            var key = localStorage.key(i);
-            var value = localStorage.getItem(key);
-            //convert the string from local storage value back to an object by using JSON.parse()
-            var obj = JSON.parse(value);
-            var makeSubList = document.createElement('ul');
-            if (i %2 != 0) {
-	            makeSubList.setAttribute("id", "sub");
-            } else {
-	            makeSubList.setAttribute("id", "sub2");
-           }
-            makeLi.appendChild(makeSubList);
-            getImage(obj.priority[1], makeSubList);
-            getProgress(obj, makeSubList);
-             for (var x in obj){
-                var makeSubListItem =document.createElement('li');
-                makeSubList.appendChild(makeSubListItem);
-                makeSubListItem.style.color = "white";
-                optSubText = "<strong> " + obj[x][0] +"</strong> "+ "<p style=\"display:inline;\">" + obj[x][1] + "</p>";
-                makeSubListItem.innerHTML = optSubText;
-                makeSubList.appendChild(linksLi);
-                }
-            makeItemLinks(localStorage.key(i), linksLi); //creates our edit and delete button.links for each item in local storage
-            }
+			var makeLi = document.createElement('li');
+			var linksLi = document.createElement('li');
+			makeList.appendChild(makeLi);
+			var key = localStorage.key(i);
+			var value = localStorage.getItem(key);
+			//convert the string from local storage value back to an object by using JSON.parse()
+			var obj = JSON.parse(value);
+			var makeSubList = document.createElement('ul');
+			if (i %2 != 0) {
+				makeSubList.setAttribute("id", "sub");
+			} else {
+				makeSubList.setAttribute("id", "sub2");
+			}
+			makeLi.appendChild(makeSubList);
+			getImage(obj.priority[1], makeSubList);
+			getProgress(obj, makeSubList);
+			for (var x in obj){
+				var makeSubListItem =document.createElement('li');
+				makeSubList.appendChild(makeSubListItem);
+				makeSubListItem.style.color = "white";
+				optSubText = "<strong> " + obj[x][0] +"</strong> "+ "<p style=\"display:inline;\">" + obj[x][1] + "</p>";
+				makeSubListItem.innerHTML = optSubText;
+				makeSubList.appendChild(linksLi);
+			}
+			makeItemLinks(localStorage.key(i), linksLi); //creates our edit and delete button.links for each item in local storage
+		}
             $.mobile.changePage( '#displayPage' );
 };
 
