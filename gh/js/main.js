@@ -1,5 +1,5 @@
 //Christopher Rockwell
-//Project 1
+//Project 2
 //ASD 1301
 
 
@@ -122,14 +122,88 @@ $('#additems').on('pageinit', function(){
 		alert("Handler for .click() called.");
 	});
 */
-	$("#display").click(function() {
-		if (localStorage.length === 0){
-	            alert("There is no data in local storage so default data was added.");
-	            autofillData();
-	        }
+	
+	$('#json').click(function() {
+		localStorage.clear();
+		 for(var n in json) {
+			var id = Math.floor((Math.random()*10000000)+1);
+			localStorage.setItem(id, JSON.stringify(json[n]));
+		}
 		$.mobile.changePage( '#displayPage' );
 		window.location.reload();
 	});
+	
+	$('#xml').click(function() {
+		//keep ajax from chaching 
+		$.ajaxSetup({ cache: false });
+		//clear local storage
+		localStorage.clear();
+		$.ajax({
+			url: 'xhr/data.xml',
+			type: 'GET',
+			dataType: 'xml',
+			success: function(dataXml) {
+				var data = $.parseXML(dataXml);
+				// wrap the XML in a jQuery object to make it easier to work with
+				var items = $(dataXml);
+				items.find("item").each(function(){
+					var item = $(this);
+					var itemObj = {
+							"name": ["Item Name:", item.find("name").text()],
+							"brand": ["Item Brand:", item.find("brand").text()],
+							"quantity": ["Quantity:", item.find("quantity").text()],
+							"cost": ["Total Cost:", item.find("cost").text()],
+							"date": ["Pledge Date:", item.find("date").text()],
+							"priority": ["Priority:", item.find("priority").text()],
+							"timeFrame": ["Time Frame:", item.find("time").text()],
+							"amountSaved": ["Amount Saved:", item.find("saved").text()],
+							"motivation": ["Motivation:", item.find("motivation").text()],
+							"space": ["<br>", "<br>"]
+						}
+					var id = Math.floor((Math.random()*10000000)+1);
+					localStorage.setItem(id, JSON.stringify(itemObj));
+				});
+				$.mobile.changePage( '#displayPage' );
+				window.location.reload();
+			}
+		
+		});
+	});
+	
+	$('#csv').click(function() {
+		//keep ajax from chaching 
+		$.ajaxSetup({ cache: false });
+		//clear local storage
+		localStorage.clear();
+		$.ajax({
+			url: 'xhr/data.csv',
+			type: 'GET',
+			success: function(dataCsv) {
+				// use CSV jQuery plugin to put CSV data into an array
+				var data = $.csv.toArrays(dataCsv);
+				for (var j = 1; j < 6; j++) {
+					var itemObj = {
+							"name": ["Item Name:", data[j][0]],
+							"brand": ["Item Brand:", data[j][1]],
+							"quantity": ["Quantity:", data[j][2]],
+							"cost": ["Total Cost:", data[j][3]],
+							"date": ["Pledge Date:", data[j][4]],
+							"priority": ["Priority:", data[j][5]],
+							"timeFrame": ["Time Frame:", data[j][6]],
+							"amountSaved": ["Amount Saved:", data[j][7]],
+							"motivation": ["Motivation:", data[j][8]],
+							"space": ["<br>", "<br>"]
+						}
+					var id = Math.floor((Math.random()*10000000)+1);
+					localStorage.setItem(id, JSON.stringify(itemObj));
+				}
+				$.mobile.changePage( '#displayPage' );
+				window.location.reload();
+			}
+		});
+		
+	});
+	
 	$('#submit').click(function() {
 		var data = myForm.serializeArray();
 		storeData(data);
@@ -189,32 +263,32 @@ var getData = function(){
 		makeDiv.appendChild(makeList);
 		 $("#dis").append($(makeDiv));
 		for(var i=0,j=localStorage.length;i<j;i++){
-            var makeLi = document.createElement('li');
-            var linksLi = document.createElement('li');
-            makeList.appendChild(makeLi);
-            var key = localStorage.key(i);
-            var value = localStorage.getItem(key);
-            //convert the string from local storage value back to an object by using JSON.parse()
-            var obj = JSON.parse(value);
-            var makeSubList = document.createElement('ul');
-            if (i %2 != 0) {
-	            makeSubList.setAttribute("id", "sub");
-            } else {
-	            makeSubList.setAttribute("id", "sub2");
-           }
-            makeLi.appendChild(makeSubList);
-            getImage(obj.priority[1], makeSubList);
-            getProgress(obj, makeSubList);
-             for (var x in obj){
-                var makeSubListItem =document.createElement('li');
-                makeSubList.appendChild(makeSubListItem);
-                makeSubListItem.style.color = "white";
-                optSubText = "<strong> " + obj[x][0] +"</strong> "+ "<p style=\"display:inline;\">" + obj[x][1] + "</p>";
-                makeSubListItem.innerHTML = optSubText;
-                makeSubList.appendChild(linksLi);
-                }
-            makeItemLinks(localStorage.key(i), linksLi); //creates our edit and delete button.links for each item in local storage
-            }
+			var makeLi = document.createElement('li');
+			var linksLi = document.createElement('li');
+			makeList.appendChild(makeLi);
+			var key = localStorage.key(i);
+			var value = localStorage.getItem(key);
+			//convert the string from local storage value back to an object by using JSON.parse()
+			var obj = JSON.parse(value);
+			var makeSubList = document.createElement('ul');
+			if (i %2 != 0) {
+				makeSubList.setAttribute("id", "sub");
+			} else {
+				makeSubList.setAttribute("id", "sub2");
+			}
+			makeLi.appendChild(makeSubList);
+			getImage(obj.priority[1], makeSubList);
+			getProgress(obj, makeSubList);
+			for (var x in obj){
+				var makeSubListItem =document.createElement('li');
+				makeSubList.appendChild(makeSubListItem);
+				makeSubListItem.style.color = "white";
+				optSubText = "<strong> " + obj[x][0] +"</strong> "+ "<p style=\"display:inline;\">" + obj[x][1] + "</p>";
+				makeSubListItem.innerHTML = optSubText;
+				makeSubList.appendChild(linksLi);
+			}
+			makeItemLinks(localStorage.key(i), linksLi); //creates our edit and delete button.links for each item in local storage
+		}
             $.mobile.changePage( '#displayPage' );
 };
 
