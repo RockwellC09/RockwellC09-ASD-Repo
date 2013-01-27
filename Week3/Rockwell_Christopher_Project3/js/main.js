@@ -204,6 +204,39 @@ $('#additems').on('pageinit', function(){
 		
 	});
 	
+	$('#couch').click(function() {
+		//keep ajax from chaching 
+		$.ajaxSetup({ cache: false });
+		//clear local storage
+		localStorage.clear();
+		$.ajax({
+			"url": 'http://127.0.0.1:5984/asdcloud/_all_docs?include_docs=true&start_key="811"',
+			"dataType": "json",
+			"success": function(data) {
+				$.each(data.rows, function(index, item) {
+					if (item.doc._id != "_design/app") {
+						var itemObj = {
+							"name": ["Item Name:", item.doc.name[1]],
+							"brand": ["Item Brand:", item.doc.brand[1]],
+							"quantity": ["Quantity:", item.doc.cost[1]],
+							"cost": ["Total Cost:", item.doc.cost[1]],
+							"date": ["Pledge Date:", item.doc.date[1]],
+							"priority": ["Priority:", item.doc.priority[1]],
+							"timeFrame": ["Time Frame:", item.doc.timeFrame[1]],
+							"amountSaved": ["Amount Saved:", item.doc.amountSaved[1]],
+							"motivation": ["Motivation:", item.doc.motivation[1]],
+							"space": ["<br>", "<br>"]
+						}
+					var id = Math.floor((Math.random()*10000000)+1);
+					localStorage.setItem(id, JSON.stringify(itemObj));
+					}	
+				});
+				$.mobile.changePage( '#displayPage' );
+				window.location.reload();
+			}
+		});
+	});
+	
 	$('#submit').click(function() {
 		var data = myForm.serializeArray();
 		storeData(data);
@@ -821,7 +854,9 @@ var editItem = function (){
         
         var cost = item.cost[1].replace(/\$/g,'');
         var cost2 = item.amountSaved[1].replace(/\$/g,'');
+	$('#priority1').removeAttr('checked');
         $('#priority2').removeAttr('checked');
+	$('#priority3').removeAttr('checked');
         if (item.priority[1] == "Low!") {
                 $('#priority1').prop('checked', true);
             } else if (item.priority[1] == "Medium!!") {
