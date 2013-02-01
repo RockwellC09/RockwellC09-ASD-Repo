@@ -119,15 +119,6 @@ $('#additems').on('pageinit', function(){
 	
 });
 
-//The functions below can go inside or outside the pageinit function for the page in which it is needed.
-
-var autofillData = function (){
-	 for(var n in json) {
-            var id = Math.floor((Math.random()*10000000)+1);
-            localStorage.setItem(id, JSON.stringify(json[n]));
-        }
-};
-
 var getData = function(){
 		
 		var makeDiv = document.createElement('div');
