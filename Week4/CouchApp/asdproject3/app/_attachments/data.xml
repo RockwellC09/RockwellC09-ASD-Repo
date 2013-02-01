@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+    <item>
+        <name>iPhone</name>
+        <brand>Apple</brand>
+        <quantity>1</quantity>
+        <cost>$500.00</cost>
+        <date>2012-10-17</date>
+        <priority>High!!!</priority>
+        <time>0-6 months</time>
+        <saved>$250.00</saved>
+        <motivation>Need it for school.</motivation>
+    </item>
+    
+    <item>
+        <name>iPad</name>
+        <brand>Apple</brand>
+        <quantity>1</quantity>
+        <cost>$500.00</cost>
+        <date>2012-10-17</date>
+        <priority>High!!!</priority>
+        <time>6 months to a year</time>
+        <saved>$200.00</saved>
+        <motivation>Need it for work.</motivation>
+    </item>
+    
+    <item>
+        <name>iMac</name>
+        <brand>Apple</brand>
+        <quantity>1</quantity>
+        <cost>$2000.00</cost>
+        <date>2012-08-05</date>
+        <priority>Low!</priority>
+        <time>Between 1-3 years</time>
+        <saved>$100.00</saved>
+        <motivation>Buying it for work and entertainment.</motivation>
+    </item>
+    
+    <item>
+        <name>Beats by Dre Solo Headphones</name>
+        <brand>Beats Electronics</brand>
+        <quantity>1</quantity>
+        <cost>$200.00</cost>
+        <date>2012-10-24</date>
+        <priority>Medium!!</priority>
+        <time>6 months to a year</time>
+        <saved>$20.00</saved>
+        <motivation>Buying it for entertainment.</motivation>
+    </item>
+    
+    <item>
+        <name>iPhone Case</name>
+        <brand>OtterBox</brand>
+        <quantity>1</quantity>
+        <cost>$50.00</cost>
+        <date>2012-10-25</date>
+        <priority>High!!!</priority>
+        <time>0-6 months</time>
+        <saved>$15.00</saved>
+        <motivation>Buying it to protect my iPhone 4s.</motivation>
+    </item>
+    
+</items>

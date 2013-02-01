@@ -1,0 +1,10 @@
+{
+  "env": {
+    "local": {
+      "db": "http://127.0.0.1:5984/asdcloud"
+    },
+    "cloudant": {
+      "db": "https://minederyingcomeduchearre:SYGO3We541LF8epWOFcfslp8@rockwell-asd.cloudant.com/asdcloud"
+    }
+  }
+}

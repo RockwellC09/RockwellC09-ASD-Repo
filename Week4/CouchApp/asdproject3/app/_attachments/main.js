@@ -61,7 +61,7 @@ $('#additems').on('pageinit', function(){
 		//clear local storage
 		//localStorage.clear();
 		$.ajax({
-			"url": 'http://127.0.0.1:5984/asdcloud/_design/app/_view/data',
+			"url": '_view/data',
 			"dataType": "json",
 			"success": function(data) {
 				$.each(data.rows, function(index, item) {
@@ -135,7 +135,7 @@ var getData = function(){
 		var makeList = document.createElement('ul');
 		makeDiv.appendChild(makeList);
 		 $("#dis").append($(makeDiv));$.ajax({
-			"url": 'http://127.0.0.1:5984/asdcloud/_design/app/_view/data',
+			"url": '_view/data',
 			"dataType": "json",
 			"success": function(data) {
 				for(var i=0,j=data.rows.length;i<j;i++){
@@ -364,7 +364,7 @@ function getImage(priorityVal, makeSubList) {
         newImg.setAttribute("id", "ex");
         newImg.setAttribute("style", "margin-top: -20px;")
          newImg.setAttribute("align", "right");
-        var setSrc = newImg.setAttribute("src", "images/" + priorityVal + ".png");
+        var setSrc = newImg.setAttribute("src", "" + priorityVal + ".png");
         imageLi.appendChild(newImg);
     }
 
