@@ -134,7 +134,8 @@ var getData = function(){
 		makeDiv.setAttribute("id", "items");
 		var makeList = document.createElement('ul');
 		makeDiv.appendChild(makeList);
-		 $("#dis").append($(makeDiv));$.ajax({
+		 $("#dis").append($(makeDiv));
+		 $.ajax({
 			"url": '_view/data',
 			"dataType": "json",
 			"success": function(data) {
